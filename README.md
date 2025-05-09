@@ -1,10 +1,10 @@
 # Ubihere Intern Prep & Startup Log
 
-👋🏽 Welcome to my personal prep and documentation repo for my Summer 2025 internship at Ubihere — a startup focused on AI, computer vision, and spatial intelligence.
+Welcome to my personal prep and documentation repo for my Summer 2025 internship at Ubihere — a startup focused on AI, computer vision, and spatial intelligence.
 
 ---
 
-## 🧠 Tech Stack Snapshot
+## Tech Stack Snapshot
 
 **Confident in:**  
 JavaScript, HTML, CSS, Ruby, Rails, React, C
@@ -17,14 +17,14 @@ Python scripting, Bash, Dockerfile writing
 
 ---
 
-## 📅 Startup Log
+##  Startup Log
 
 Day-by-day log of what I've done, what tools I've touched, and what I've learned.  
 See: [`startup-log/log.md`](startup-log/log.md)
 
 ---
 
-## ⚙️ Environments Set Up
+##  Environments Set Up
 
 - Ubuntu on Mac (via Multipass)
 - Docker + Docker Compose
@@ -33,7 +33,7 @@ See: [`startup-log/log.md`](startup-log/log.md)
 
 ---
 
-## 🗃️ Notes & Scratchpad
+##  Notes & Scratchpad
 
 WIP ideas, reference notes, and brainstorms related to:
 - UbiVision commercial deployments
