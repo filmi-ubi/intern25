@@ -1,5 +1,5 @@
 
-**5/7/25**
+## 5/7/25
 
 - Set up a Linux VM on a Mac (M2) using Multipass to run Ubuntu Installed Label Studio manually
 - Annotated object detection data in YOLO format.
@@ -21,12 +21,12 @@
 - Connected Mac and Linux with shared folder access
 - imported BVy data set
 
-**5/8/25**
+## **5/8/25**
 
 - Downloaded and set up ubuntu on vm 
 - Onboarding and quickbooks finished
 
-**5/11/25**
+## **5/11/25**
 
 - got work laptop and got all my virtual environments downloaded
 - got automation for label studio to work 
@@ -35,7 +35,10 @@
 want to do:
 - possibly train the backend to be smarter? 
 
-**5/12/25**
+
+
+
+## 5/12/25
 
 What I'm Doing — My Role Right Now
 So, here’s where I’m at after the latest meeting with the CEO:
@@ -84,6 +87,8 @@ Questions I Still Have
 
 - How do I represent walls and constraints? Am I pulling these from the blueprint or is that already digitized for me?
 
+  
+
 2. Tech + Data
 
 - Will Noah’s data include position info that maps to QGIS coordinates? Or do I need to connect object locations to specific rooms manually?
@@ -91,6 +96,8 @@ Questions I Still Have
 - Do I need to install QGIS locally, or is there a JS library I’ll be working with directly?
 
 - How much should I know about coordinate systems or layers in QGIS? Should I just be treating them like tagged zones?
+
+  
 
 3. Unknown Zones
 
@@ -109,9 +116,9 @@ Questions I Still Have
 
 - Once I get that, I’ll look it over and figure out how to connect it to what I’m building on the frontend.
 
-5/13/25 
+## 5/13/25 
  Summary: What I’m Doing (as of now)
-Today Eric told me he wants me to build the Space Definition Tool for our building — 4601. The output of this tool will be a detailed YAML file that defines the layout and logic of the space using vector mapping (likely from QGIS or a blueprint). Basically, I’ll be breaking down the building into tagged areas like:
+Today Eric told me he wants me to build the Space Definition Tool for our building, 4601 Lyman Dr, Hilliard, OH. The output of this tool will be a detailed YAML file that defines the layout and logic of the space using vector mapping (likely from QGIS or a blueprint). Basically, I’ll be breaking down the building into tagged areas like:
 
 - Bounded spaces (e.g., rooms enclosed by walls)
 
@@ -119,10 +126,10 @@ Today Eric told me he wants me to build the Space Definition Tool for our buildi
 
 - Unknown spaces (stuff outside of our scope — not important)
 
-- This YAML will serve as the structural backbone for track rectification — the tool Noah’s building that pieces together object tracks over the course of a day using entrance/exit logic.
+- This YAML will serve as the structural backbone for track rectification/track merge, the tool Noah’s building that pieces together object tracks over the course of a day using entrance/exit logic.
 
 How It All Connects
-- Noah is coding the backend logic for track rectification, and Bushra is building the frontend skeleton.
+- Noah is coding the backend logic for track rectification, and Bushra is building the frontend skeleton. It is on the Ubihere github under 
 
 - I’m working alongside them, but now I also own the spatial definition side — mapping out spaces that get used by the rectification logic.
 
@@ -160,3 +167,6 @@ Will this YAML be visualized anywhere in the tool I’m working on? Or is it pur
 
 5. Collaboration
 Once I define the space layout, who’s using it next — just Noah's backend, or does Bushra also reference it in the UI?
+
+
+**5/13/25**
