@@ -84,6 +84,7 @@ Create a draft of the building perimeter with at least two TRAVERSABLE legs (lik
   - Define the first internal space ("Big Unknown")
   - Begin structuring the first draft of the YAML file
 
-5/14/25 @ 2:00 pm
-I just finished breaking down the building perimeter into individual edge segments in QGIS. Now I’m setting up the attributes so each segment can be marked as either TRAVERSABLE or NOT_TRAVERSABLE, just like you described in the YAML structure. The building is fully geo-rectified, and the outer polyline is titled ‘Ubihere-4601Lyman.’ Next, I’m going to tag the door segments with unique UUIDs and start building the internal Big Unknown space that shares those traversals.
+## Actual work 
+**5/14/25 @ 2:00 pm**
+- I just finished breaking down the building perimeter into individual edge segments in QGIS. Now I’m setting up the attributes so each segment can be marked as either TRAVERSABLE or NOT_TRAVERSABLE, just like you described in the YAML structure. The building is fully geo-rectified, and the outer polyline is titled ‘Ubihere-4601Lyman.’ Next, I’m going to tag the door segments with unique UUIDs and start building the internal Big Unknown space that shares those traversals.
 
