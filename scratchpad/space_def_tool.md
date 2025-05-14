@@ -44,6 +44,32 @@ The system should be able to:
 This YAML file will be used by the SWE and tracking pipeline to reconcile object identities and manage building state throughout the day.
 
 ---
+
+## What I Was Given vs. What I’m Building
+
+### What I Was Given
+- A geo-rectified floorplan of 4601 Lyman
+- A rough perimeter polygon titled `"Ubihere-4601Lyman"`
+- A partial YAML structure showing:
+  - Building perimeter with labeled `TRAVERSABLE` vs `NOT_TRAVERSABLE` legs
+  - Use of `uuid`s for exits
+  - A placeholder internal space called `Big Unknown`
+- A starter HTML/JS tool for drawing polygons (not production-ready)
+
+### What I'm Building
+- Broke the outer building polygon into individual **line segments**
+- Labeled each segment as either `TRAVERSABLE` or `NOT_TRAVERSABLE`
+- Assigned **unique UUIDs** to all `TRAVERSABLE` segments (e.g., `West_Garage_Door`)
+- Created the first internal space: `Big Unknown`, sharing traversable edges with the building
+- Will subdivide the interior into named rooms and spaces
+- Ensuring 100% space coverage with clean edge continuity
+- Applying:
+  - **Color fills** to distinguish rooms
+  - **Line color styles** for `TRAVERSABLE` (e.g., red) vs `NOT_TRAVERSABLE` (e.g., black)
+- Preparing the data for export into the YAML format used by the object tracking system
+
+### Summary
+Taking the initial WIP and turning it into a fully vectorized, labeled, and structured space definition tool that meets backend ingestion requirements.
 What I Was Given vs. What I’m Building
 
 What Eric gave me:
