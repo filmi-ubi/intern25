@@ -2,6 +2,12 @@
 
 ## Project: Internal Space Definition Tool (4601 Lyman Dr)
 
+### Context
+
+This project builds on a preliminary spatial layout created by Misha, which visually mapped the camera zones and general room structure of the 4601 Lyman building. While Misha’s version provided a useful visual reference for internal areas and camera coverage, it was not built using vector geometry or connected data.
+
+My contribution focuses on translating that visual structure into a clean, scalable vector-based system using QGIS. I created precise, closed polygons and line segments that define each room and hallway, tag traversable vs. non-traversable edges, and assign unique UUIDs to all exit points. This vectorized structure allows for geometric continuity, logical edge sharing, full spatial coverage, and export to YAML — making it compatible with Ubihere’s backend object tracking and space reasoning systems.
+
 ### What I'm Working On
 
 I'm building a tool to digitally map the internal layout of my company’s building (4601 Lyman Dr). The goal is to define and label all interior spaces (like rooms, hallways, and exits) so our system can understand the structure of the building and how people or objects move through it.
