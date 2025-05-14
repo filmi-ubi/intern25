@@ -44,6 +44,25 @@ The system should be able to:
 This YAML file will be used by the SWE and tracking pipeline to reconcile object identities and manage building state throughout the day.
 
 ---
+What I Was Given vs. What I’m Building
+
+What Eric gave me:
+	•	A geo-rectified floorplan of 4601 Lyman
+	•	A rough perimeter polygon titled "Ubihere-4601Lyman"
+	•	A work-in-progress idea of how the building perimeter should be structured in YAML, including concepts like TRAVERSABLE legs, uuids, and a placeholder space (Big Unknown)
+	•	A basic HTML tool mockup (not fully functional) as a starting point for vectorizing space definitions
+
+What he wants me to do:
+	•	Break the outer building perimeter into individual line segments
+	•	Label each leg as either TRAVERSABLE or NOT_TRAVERSABLE
+	•	Assign a unique uuid to each TRAVERSABLE segment (e.g., doorways, exits)
+	•	Create internal spaces starting with a Big Unknown polygon, and later break it into clearly defined rooms, hallways, etc.
+	•	Make sure every space is fully enclosed and shares edges with its neighbors — no gaps, no overlaps
+	•	Apply color fills to each space and color-code edge types (TRAVERSABLE vs. NOT_TRAVERSABLE)
+	•	Ensure the final output can be exported to a YAML file with a clean structure the backend can ingest
+
+In short: I’m taking his WIP base and turning it into a fully vectorized, labeled, color-coded, and exportable space definition system.
+---
 
 ### New Context from Eric (5/13/25)
 
@@ -86,5 +105,9 @@ Create a draft of the building perimeter with at least two TRAVERSABLE legs (lik
 
 ## Actual work 
 **5/14/25 @ 2:00 pm**
-- I just finished breaking down the building perimeter into individual edge segments in QGIS. Now I’m setting up the attributes so each segment can be marked as either TRAVERSABLE or NOT_TRAVERSABLE, just like you described in the YAML structure. The building is fully geo-rectified, and the outer polyline is titled ‘Ubihere-4601Lyman.’ Next, I’m going to tag the door segments with unique UUIDs and start building the internal Big Unknown space that shares those traversals.
+I took the geo-rectified floorplan and initial building perimeter Eric provided and broke it into individual edge segments using QGIS. This allows me to label each segment as either TRAVERSABLE or NOT_TRAVERSABLE, and assign unique UUIDs to any exits or entry points (e.g., West_Garage_Door, East_Side_Conference_Exit). The outer perimeter is fully defined and titled "Ubihere-4601Lyman".
+
+Next, I’m creating the first internal space (Big Unknown) which shares all TRAVERSABLE legs with the outer perimeter. After that, I’ll begin subdividing the interior into individual rooms and spaces. Each space will be uniquely named, typed, and color-filled to allow for clear separation and YAML export. I’m enforcing full continuity and coverage to make sure every square foot is accounted for, and all shared edges are cleanly snapped and aligned.
+
+The end goal is a fully labeled, color-separated, and logically structured building map that exports to the YAML format used by the object tracking system.
 
