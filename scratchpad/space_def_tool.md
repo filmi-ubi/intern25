@@ -143,3 +143,20 @@ Next, I’m creating the first internal space (Big Unknown) which shares all TRA
 
 The end goal is a fully labeled, color-separated, and logically structured building map that exports to the YAML format used by the object tracking system.
 
+**5/15/25**
+I created and exported a complete vectorized layout of the 4601 building using a georeferenced TIFF sourced from Ohio’s GIS portal. The PNG originally provided by Eric couldn’t be properly aligned in QGIS, so I substituted in the state-provided GeoTIFF to ensure accurate coordinate registration (EPSG:4326). Eric later confirmed this was the correct approach.
+
+Using QGIS, I finalized three distinct GeoTIFF outputs:
+
+- One with the floorplan cleanly rendered over satellite imagery
+
+- One showing the internal layout with color-coded room types
+
+- One identical to the above but with no fill for a minimal reference layer
+
+Each version maintains correct spatial alignment and is suitable for integration into the environment builder.
+
+Additionally, I exported the full layout as a .geojson file, preserving all segment and space metadata for future parsing and YAML transformation. I also provided simplified .png snapshots for quick visual reference and packaged the original Ohio TIFF data separately for transparency.
+
+All files have been delivered to Misha for integration into the new React-based tool. I’m now preparing to begin collaborative work on that front.
+
