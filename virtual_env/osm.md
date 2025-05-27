@@ -89,8 +89,9 @@ docker run -p 8080:80 \
 ```
 - Tile server working at http://localhost:8080 with Ohio data rendering properly.
 
-### 5/22–5/24/25 — Moved to Test Server
-- Transitioned from Docker to a dedicated Ubuntu test server at 10.0.0.116
+### 5/22–5/24/25 — Moved to Kyle's Test Server
+- Transitioned from Docker to a dedicated Ubihere test server at 10.0.0.116
+  - usr/osm_project 
 
 - Installed PostgreSQL 14 with PostGIS extension
 
@@ -121,8 +122,9 @@ tilemaker --input ohio-latest.osm.pbf --output ohio.mbtiles \
 ### 5/27/25 — Tile Server and Web Map
 - Set up mbtileserver to serve vector tiles:
 
-
+```sh
 ./mbtileserver -d ~/osm_project/tiles -p 8000
+```
 - Verified tile service at:
 
 ```sh
