@@ -20,7 +20,7 @@ Python scripting, Bash, Dockerfile writing
 ##  Startup Log
 
 Day-by-day log of what I've done, what tools I've touched, and what I've learned.  
-See: [`startup-log/log.md`](startup-log/log.md)
+See: [`startup-log/log.md`](startup-log)
 
 ---
 
