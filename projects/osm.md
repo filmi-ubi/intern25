@@ -1,6 +1,14 @@
-## OSM Tile Server Progress Log
+## OSM Tile Server Progress Log 
 
-### 5/19/25 — Tile Server Working
+# Terminal Commands to get website running on TestServer:
+
+- cd osm_project/mbtileserver: ./mbtileserver --port 8081 ohio-segmented.mbtiles
+- cd osm_project/viewer: python3 -m http.server 8080
+- http://10.0.0.116:8080/map.html
+  
+### Leaflet Implementation: 
+
+## 5/19/25 — Tile Server Working
 
 - Set up a local OpenStreetMap tile server using `overv/openstreetmap-tile-server` (Docker)
 - Created volume to hold the database:
@@ -45,10 +53,9 @@
 - Tile server successfully rendered map. Verified `http://localhost:8080` loads Ohio data.
 
 
+### MBtiles Implementation:
 
-## OSM Tile Server Progress Log
-
-### 5/21/25 — Initial Setup with Docker
+## 5/21/25 — Initial Setup with Docker
 
 - Set up a local OpenStreetMap tile server using `overv/openstreetmap-tile-server` (Docker) and leaflet
 - Created volume to hold the database:
@@ -89,7 +96,7 @@ docker run -p 8080:80 \
 ```
 - Tile server working at http://localhost:8080 with Ohio data rendering properly.
 
-### 5/22–5/24/25 — Moved to Kyle's Test Server
+## 5/22–5/24/25 — Moved to Kyle's Test Server
 - Transitioned from Docker to a dedicated Ubihere test server at 10.0.0.116
   - usr/osm_project 
 
@@ -102,7 +109,7 @@ osm2pgsql -c -d osm -U osm -H localhost -S /usr/share/osm2pgsql/default.style oh
 ```
 - Import completed successfully. Confirmed same row counts as before.
 
-### 5/25–5/26/25 — Vector Tile Generation
+## 5/25–5/26/25 — Vector Tile Generation
 - Installed tilemaker to generate vector tiles instead of raster ones
 
 - Created and configured:
@@ -119,15 +126,14 @@ tilemaker --input ohio-latest.osm.pbf --output ohio.mbtiles \
 ```
 - **Result: ohio.mbtiles (598MB) with zoom levels 0–14**
 
-### 5/27/25 — Tile Server and Web Map
+## 5/27/25 — Tile Server and Web Map
 - Set up mbtileserver to serve vector tiles:
 
 ```sh
 ./mbtileserver -d ~/osm_project/tiles -p 8000
-```
+
 - Verified tile service at:
 
-```sh
 http://10.0.0.116:8000/services/ohio/tiles/{z}/{x}/{y}.pbf
 ```
 
@@ -155,6 +161,61 @@ http://10.0.0.116:8000/services/ohio/tiles/{z}/{x}/{y}.pbf
 - Final web map available at http://10.0.0.116:8081/map.html
 
 - No external services (e.g., Mapbox or Google Maps) required
+
+
+## 5/28/25 — Columbus Vector Tiles + MapLibre Setup
+- Focused on smaller, faster tiles by generating vector tiles specifically for Columbus
+
+- Used BBBike to download a compact .osm.pbf file for just the Columbus region
+
+- Placed the file at: ~/Documents/ubi/osm/data/data.osm.pbf
+
+- Ran tilemaker with OpenMapTiles schema:
+
+```sh
+./tilemaker \
+  --input ~/Documents/ubi/osm/data/data.osm.pbf \
+  --output columbus.mbtiles \
+  --config config.json \
+  --process process.lua
+```
+
+- **Output: columbus.mbtiles (32MB) with zoom levels 0–14**
+
+- Successfully parsed roads, landuse, buildings, and water layers
+
+- Moved columbus.mbtiles into tilesets/ for serving via Consbio’s mbtileserver:
+
+```sh
+./mbtileserver
+Verified vector tile service at:
+```
+```sh
+http://localhost:8000/services/columbus/tiles/{z}/{x}/{y}.pbf
+Built frontend using MapLibre GL JS:
+```
+
+- Created map.html file and served it via:
+
+- python3 -m http.server 8081
+- Page accessible at:
+```sh
+http://localhost:8081/map.html
+Encountered styling/rendering issues:
+```
+
+- No layers were visible due to missing or misconfigured source-layer name in HTML
+
+- Checked MapLibre dev tools but nothing showed — suspecting malformed style or tile schema
+
+
+**Next Steps:**
+
+1. Inspect actual source-layer names in columbus.mbtiles using tools like tile-join or mbview
+
+2. Confirm tile response headers and structure match vector tile expectations
+
+3. Build a working style.json and extract layer metadata from tileset
 
 
 
