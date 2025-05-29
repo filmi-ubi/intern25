@@ -1,10 +1,16 @@
 ## OSM Tile Server Progress Log 
 
 # Terminal Commands to get website running on TestServer:
-
-- cd osm_project/mbtileserver: ./mbtileserver --port 8081 ohio-segmented.mbtiles
-- cd osm_project/viewer: python3 -m http.server 8080
-- http://10.0.0.116:8080/map.html
+```bash
+ cd osm_project/mbtileserver: ./mbtileserver --port 8081 ohio-segmented.mbtiles
+ cd osm_project/viewer: python3 -m http.server 8080
+ website: http://10.0.0.116:8080/map.html
+```
+# Terminal Commands to connect to tileserver
+```bash
+tileserver-gl ohio-segmented.mbtiles
+website: http://localhost:8080/
+```
   
 ### Leaflet Implementation: 
 
@@ -216,6 +222,34 @@ Encountered styling/rendering issues:
 2. Confirm tile response headers and structure match vector tile expectations
 
 3. Build a working style.json and extract layer metadata from tileset
+
+## 5/29/25 — Pivot: Moving OSM Processing Back to Local Laptop
+
+Decision: Shifted OpenStreetMap processing workflow from Ubihere TestServer (10.0.0.116) back to personal development laptop.
+
+Why:
+
+- System limitations on TestServer:
+
+  - Only 1GB RAM available vs 9.3GB free on my laptop
+  - TestServer already using 3.1GB of swap, indicating resource strain
+  - Tight storage on server vs 827GB free locally
+
+- Performance needs:
+  - OSM tile generation (especially with tilemaker) is resource-intensive
+  - My machine handles imports and MBTiles generation faster and more reliably
+
+- Workflow clarity:
+  - Server is shared—limited control, potential interruptions
+  - Laptop gives full root access, no blockers
+  - Cleaner division of labor: local = compute, server = serve
+- Updated Plan:
+  - Sync project files from TestServer to local
+  - Clean up /usr/osm_project on server to free disk space
+  - Run intensive tasks (e.g. generating vector tiles for surrounding states) locally
+  - Use TestServer only to host final *.mbtiles via mbtileserver
+
+**Bottom line: My laptop is simply better equipped for OSM processing. This pivot streamlines work and avoids fighting server constraints.**
 
 
 
