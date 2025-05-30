@@ -33,11 +33,3 @@ See: [`startup-log`](startup-log)
 
 ---
 
-##  Notes & Scratchpad
-
-WIP ideas, reference notes, and brainstorms related to:
-- UbiVision commercial deployments
-- Innovation Center automation
-- Internal tools, dashboards, CRM feedback forms
-
-See: [`scratchpad/`](scratchpad/)
