@@ -1,16 +1,10 @@
 ## OSM Tile Server Progress Log 
 
-# Terminal Commands to get custom backend running on TestServer:
-```bash
- cd osm_project/repos/mbtileserver: ./mbtileserver --port 8081 ohio-segmented.mbtiles
- cd osm_project/viewer: python3 proxy_server.py &
- website: http://10.0.0.116:8080/map.html
-```
-
 # Terminal Commands to get website running locally:
 ```bash
  cd Documents/osm_project/repos/mbtileserver: ./mbtileserver --port 8081 ohio-segmented.mbtiles
  cd Documents/osm_project/viewer: python3 proxy_server.py &
+  - If port is being used: sudo lsof -i :8081 -> sudo kill <PID>
  website: http://localhost:8085/map.html
 ```
 
@@ -19,7 +13,14 @@
 cd Documents/osm_project: tileserver-gl ohio-complete.mbtiles
 website: http://localhost:8080/
 ```
-  
+
+# Terminal Commands to get custom backend running on TestServer:
+```bash
+ cd osm_project/repos/mbtileserver: ./mbtileserver --port 8081 ohio-segmented.mbtiles
+ cd osm_project/viewer: python3 proxy_server.py &
+ website: http://10.0.0.116:8080/map.html
+```
+
 ### Leaflet Implementation: 
 
 ## 5/19/25 — Tile Server Working
