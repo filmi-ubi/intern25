@@ -4,7 +4,7 @@
 ```bash
  cd Documents/osm_project/repos/mbtileserver: ./mbtileserver --port 8081 ohio-segmented.mbtiles
  cd Documents/osm_project/viewer: python3 proxy_server.py &
-  - If port is being used: sudo lsof -i :8081 -> sudo kill <PID>
+  - If port is being used: sudo lsof -i :PORT_IN_USE -> sudo kill <PID>
  website: http://localhost:8085/map.html
 ```
 
