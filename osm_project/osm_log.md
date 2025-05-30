@@ -2,15 +2,15 @@
 
 # Terminal Commands to get custom backend running on TestServer:
 ```bash
- cd osm_project/mbtileserver: ./mbtileserver --port 8081 ohio-segmented.mbtiles
+ cd osm_project/repos/mbtileserver: ./mbtileserver --port 8081 ohio-segmented.mbtiles
  cd osm_project/viewer: python3 -m http.server 8080
  website: http://10.0.0.116:8080/map.html
 ```
 
 # Terminal Commands to get website running locally:
 ```bash
- cd osm_project/mbtileserver: ./mbtileserver --port 8081 ohio-segmented.mbtiles
- cd osm_project/viewer: cd osm_project/viewer:
+ cd Documents/osm_project/repos/mbtileserver: ./mbtileserver --port 8081 ohio-segmented.mbtiles
+ cd Documents/osm_project/viewer: cd osm_project/viewer:
  website: http://localhost:8085/map.html
 ```
 
