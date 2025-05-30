@@ -16,7 +16,7 @@
 
 # Terminal Commands to connect to tileserver
 ```bash
-cd Documents/osm_project: tileserver-gl ohio-segmented.mbtiles
+cd Documents/osm_project: tileserver-gl ohio-complete.mbtiles
 website: http://localhost:8080/
 ```
   
