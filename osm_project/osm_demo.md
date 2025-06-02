@@ -4,18 +4,30 @@
 
 ### Start My Servers
 
-**Terminal 1**
+**Terminal 1 (for Ohio)**
 ```bash
 cd ~/Documents/osm_project/repos/mbtileserver 
-./mbtileserver --port 8081 ohio-segmented.mbtiles 
-```
- 
+./mbtileserver --port 8081 
+ ```
 **Terminal 2** 
 ```bash
 
 cd ~/Documents/osm_project/viewer 
-python3 proxy_server.py
+python3 ohio_proxy_server.py
 ```
+
+**Terminal 1 (for Midwest)**
+```bash
+cd ~/Documents/osm_project/repos/mbtileserver 
+./mbtileserver --port 8081
+ ```
+**Terminal 2** 
+```bash
+
+cd ~/Documents/osm_project/viewer 
+python3 midwest_proxy_server.py
+```
+
 
 
 ## 2. Open My Browser Tabs (in this order) 
