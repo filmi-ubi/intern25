@@ -28,7 +28,12 @@ cd ~/Documents/osm_project/viewer
 python3 midwest_proxy_server.py
 ```
 
+**To kill servers:**
 
+```bash
+sudo pkill -f python3
+sudo pkill -f mbtileserver
+```
 
 ## 2. Open My Browser Tabs (in this order) 
   - http://localhost:8085/map.html (my custom setup)
