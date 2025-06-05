@@ -309,5 +309,5 @@ OSM Data → Tilemaker → MBTiles → MBTileserver → Python Proxies → React
 - React app on port 3000 displaying professional dual-map interface
 
 only extract the road data through osm. just roads
-
+extract vector data (schema)
 
