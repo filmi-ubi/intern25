@@ -260,5 +260,53 @@ Why:
 
 **Bottom line: My laptop is simply better equipped for OSM processing. This pivot streamlines work and avoids fighting server constraints.**
 
+## 5/30/25 — Dual Proxy Architecture & Individual Map Pages
+
+**Created separate Python proxy servers for Ohio and Midwest tilesets:**
+
+- ohio_proxy_server.py running on port 8085
+- midwest_proxy_server.py running on port 8086
+
+
+**Built individual HTML map pages:**
+
+- ohio_map.html - Single Ohio map interface
+- midwest_map.html - Single Midwest map interface
+
+
+**Both maps working independently with proper CORS handling and gzip decompression**
+- Verified tile serving pipeline: MBTileserver → Python Proxy → HTML Frontend
+
+## 6/01-6/03/25 — GL Tile Server Integration
+
+1. Set up GL tile server as alternative hosting method**
+2. Tested tile serving through GL server before React migration**
+3. Compared performance between MBTileserver and GL tile server approaches**
+4. Validated vector tile delivery through both serving methods**
+
+## 6/4-6/5/25 — React Migration & Dual Map Development
+
+- Spoke with Eric about transitioning from HTML to React implementation
+- Created new React application (fleet_tracker) with MapLibre GL JS
+- Built flexible MapComponent.js accepting tileset prop ('ohio' or 'midwest')
+- Developed App.js with side-by-side dual map layout
+**Implemented:**
+
+- Professional fleet tracking UI styling
+- Status indicators for both maps
+- Independent zoom controls with Midwest limited to zoom level 12 and Ohio limited to 14
+- Navigation and scale controls for both map instances
+- Real-time load status monitoring
+- Connected React frontend to existing proxy architecture
+- Optimized dual map performance with simultaneous tile loading
+- Created production-ready mapping platform with complete offline capability
+
+**Final Architecture:**
+OSM Data → Tilemaker → MBTiles → MBTileserver → Python Proxies → React Frontend
+
+- Ohio: 354MB tileset via port 8085 proxy
+- Midwest: 2.1GB tileset via port 8086 proxy
+- React app on port 3000 displaying professional dual-map interface
+
 
 
