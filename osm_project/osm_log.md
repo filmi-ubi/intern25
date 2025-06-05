@@ -308,5 +308,6 @@ OSM Data → Tilemaker → MBTiles → MBTileserver → Python Proxies → React
 - Midwest: 2.1GB tileset via port 8086 proxy
 - React app on port 3000 displaying professional dual-map interface
 
+only extract the road data through osm. just roads
 
 
