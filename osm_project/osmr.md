@@ -100,3 +100,5 @@ next task:
 when i have this 
 - deep dive on gis database and how to do it for road networks, common container aka parking lots of certain locked areas
   - if it doesnt have par
+  - - every building in ohio (starting w hilliard) all as polylines.
+    - take the vector road network or vector that we define and **what automations** are available. 
