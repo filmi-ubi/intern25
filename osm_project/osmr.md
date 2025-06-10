@@ -88,3 +88,15 @@ Do a deep dive on post GIS x-y vector polylines
 - determine what i can be bound to
 - research gis database capabiities for storing vector data
 - pull osmr vector data
+
+next task: 
+- look at what vector data i used to build osmr
+- figure out how to do a vector scheme
+  - inital x y  and then corrected x y
+ - be able to recognize when a device is on or off
+ - imu data
+ - period is epic bound (every 1 second)
+
+when i have this 
+- deep dive on gis database and how to do it for road networks, common container aka parking lots of certain locked areas
+  - if it doesnt have par
