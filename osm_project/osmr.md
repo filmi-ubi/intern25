@@ -82,4 +82,9 @@ docker run -t -i -p 5000:5000 -v "${PWD}:/data" osrm/osrm-backend osrm-routed --
 - **Offline capability:** Fully functional without internet
 
 ## Option B Status: 
-**COMPLETE** - Local OSRM routing server operational, integrated with map tiling system, ready for Trax testing
+**COMPLETE** - Local OSRM routing server operational, integrated with map tiling system
+
+Do a deep dive on post GIS x-y vector polylines
+- determine what i can be bound to
+- research gis database capabiities for storing vector data
+- pull osmr vector data
