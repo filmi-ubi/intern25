@@ -47,4 +47,4 @@
 - Phase 2: PostgreSQL + PostGIS + Custom backend
 - Phase 3: Tilemaker + MBTiles + Vector tiles
 - Phase 4: TileServer GL + MapLibre GL + Professional setup
-
+- Phase 5: Move to React!
