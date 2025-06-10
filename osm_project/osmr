@@ -1,7 +1,0 @@
-term 1: 
-- docker run -t -i -p 5000:5000 -v "${PWD}:/data" osrm/osrm-backend osrm-routed --algorithm=MLD /data/ohio-roads-only.osrm --port 5000 --ip 0.0.0.0
-
-term 2: 
-python3 pgrouting_api.py
-
-
