@@ -113,6 +113,7 @@ when i have this
       - postgres database of people moving around using postgis extensions
       - queriable triggers that are microservices that are this space this many people at this time. this person left that person joined
       - historical reviewq of wehat we have and what can auatomatically be pulled based on definitions i describe. the trigger is the outcome.  
-      -positions velocity and orientations are also markers 
+      - positions velocity and orientations are also markers 
+      
       
       
