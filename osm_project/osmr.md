@@ -87,7 +87,7 @@ docker run -t -i -p 5000:5000 -v "${PWD}:/data" osrm/osrm-backend osrm-routed --
 Do a deep dive on post GIS x-y vector polylines
 - determine what i can be bound to
 - research gis database capabiities for storing vector data
-- pull osmr vector data
+- pull osrm vector data
 
 next task: 
 - look at what vector data i used to build osmr
@@ -102,5 +102,11 @@ when i have this
   - if it doesnt have par
   - - every building in ohio (starting w hilliard) all as polylines.
     - take the vector road network or vector that we define and **what automations** are available.
+
+**7/25/25**
+  
     - postgis databse should be able to define a geofence/ be able to tell where
-    - active geofences based on tags 
+    - active geofences based on tags
+    - **quadrant of ohio** rasters of the map in squares (multilayer raster data) should be on top of the tiles layer based on zoom level. 
+    - if ohios chocking take away some tags. start w just the maps
+    
