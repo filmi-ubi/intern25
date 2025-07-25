@@ -105,8 +105,14 @@ when i have this
 
 **7/25/25**
   
-    - postgis databse should be able to define a geofence/ be able to tell where
+    - postgis database should be able to define a geofence/ be able to tell where
     - active geofences based on tags
     - **quadrant of ohio** rasters of the map in squares (multilayer raster data) should be on top of the tiles layer based on zoom level. 
-    - if ohios chocking take away some tags. start w just the maps
-    
+    - if ohios choking take away some tags. start w just the maps
+    - put some local geofence and put some points and see what triggers i can pull out of it
+      - postgres database of people moving around using postgis extensions
+      - queriable triggers that are microservices that are this space this many people at this time. this person left that person joined
+      - historical reviewq of wehat we have and what can auatomatically be pulled based on definitions i describe. the trigger is the outcome.  
+      -positions velocity and orientations are also markers 
+      
+      
