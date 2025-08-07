@@ -116,4 +116,7 @@ when i have this
       - positions velocity and orientations are also markers 
       
       
-      
+- i need lat long given an address. snap to the same way google does (interpolation, almost assume the user is going to a certain place based on movements , work on geofences (tables per customer btw a backup for us) of the tag and triggers based on the database
+- send it out as an event (probably a lamda call which includes the instructions and a trigger)
+- transition in and out of geofences
+- 
